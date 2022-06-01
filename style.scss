@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  // max-width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.wrap {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  background: #2196F3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24);
+}
+
+.nav {
+  .top-menu {
+    display: flex;
+    align-items: center;
+    
+    &__item {
+      color: rgba(255, 255, 255, 0.7);
+      cursor: pointer;
+
+      &.current {
+        background: #1E88E5;
+        color: #FFFFFF;
+      }
+
+      &:hover {
+        background: #1E88E5;
+      }
+    }
+
+    &__link {
+      display: flex;
+      padding: 23px 20px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.25px;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.cats-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cat-item {
+  width: calc(100% / 5 - 30px);
+  transition: all .3s;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
+
+    .cat-item__add-wishlist {
+      visibility: visible;
+    }
+  }
+
+  &__wrap {
+    height: 250px;
+  }
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__add-wishlist {
+    position: absolute;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    bottom: 23px;
+    right: 23px;
+    background: url(./image/favorite_border.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    visibility: hidden;
+    border: none;
+
+    &.checked {
+      background-image: url(./image/favorite.svg);
+    }
+
+    &:hover {
+      background-image: url(./image/favorite.svg);
+    }
+  }
+}
