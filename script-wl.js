@@ -46,7 +46,7 @@ function renderComponent(imagesArr) {
 }
 
 function updateWishList(id) {
-  if(location.pathname === '/wishlist.html') {
+  if(location.pathname === '/catspinterest/wishlist.html') {
     image_ids = image_ids.filter(filterefImage => filterefImage != id);
     localStorage.setItem('wishlist', image_ids);
     const currentWishListBtn = document.querySelector(`[data-id="${id}"]`);
